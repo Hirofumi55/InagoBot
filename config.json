@@ -1,0 +1,9 @@
+{
+    "code" : "FX_BTC_JPY",
+    "api_key" : "xxx",
+    "api_secret_key" : "xxx",
+    "set_size" : "0.001",
+    "sleep_time" : "5",
+    "max_count" : "100"
+
+}
