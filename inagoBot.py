@@ -3,31 +3,23 @@ import time
 import os
 import json
 import requests
-#from bs4 import BeautifulSoup
 from selenium import webdriver
 #from selenium.webdriver.chrome.options import Options
+#from bs4 import BeautifulSoup
 
 class InagoBot:
-
-    #初期値代入
-    code = "FX_BTC_JPY"
-    api_key = "xxx"
-    api_secret_key = "xxx"
-    set_size = 0.01
-    sleep_time = 5
-    max_count = 100
 
     #メンバ変数の初期化
     midprice = 0
     position_midprice = 0
     pos = 0 #long:+1 short:-1 no position:0
     count = 0
-    score = 0 #スコアリング
+    score = 0 #スコアリングシステム
 
 
     def readData(self):
         #設定の読み込み
-        f = open('config.json' , 'r', encoding="utf-8")
+        f = open('set.json' , 'r', encoding="utf-8")
         config = json.load(f)
 
         self.code = config['code']
